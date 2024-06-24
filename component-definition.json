@@ -152,14 +152,14 @@
           }
         },
         {
-          "title":"Brands",
+          "title":"Brands-block",
           "id":"brands-blocks",
           "plugins":{
             "xwalk":{
               "page":{
                 "resourceType":"core/franklin/components/block/v1/block",
                 "template":{
-                  "name":"Brands",
+                  "name":"Brands-block",
                   "filter":"brands-block"
                 }
               }
