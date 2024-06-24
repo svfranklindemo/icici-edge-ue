@@ -27,7 +27,11 @@
       "title",
       "hero",
       "cards",
-      "columns"
+      "columns",
+      "benefits-block",
+      "brands-block",
+      "security-block",
+      "top-cards"
     ]
   },
   {

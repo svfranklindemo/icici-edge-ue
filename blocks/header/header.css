@@ -1,6 +1,7 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #e76716;
+  border-bottom: 1px solid #fb8235;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -21,7 +22,7 @@ header nav {
   font-family: var(--body-font-family);
 }
 
-header nav[aria-expanded='true'] {
+header nav[aria-expanded="true"] {
   grid-template:
     'hamburger brand' var(--nav-height)
     'sections sections' 1fr
@@ -30,19 +31,19 @@ header nav[aria-expanded='true'] {
   min-height: 100vh;
 }
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
   header nav {
     padding: 0 2rem;
   }
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   header nav {
     display: flex;
     justify-content: space-between;
   }
 
-  header nav[aria-expanded='true'] {
+  header nav[aria-expanded="true"] {
     min-height: 0;
     overflow: visible;
   }
@@ -71,8 +72,8 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
-  color: inherit;
+  background-color: transparent;
+  color: #fff;
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
@@ -94,28 +95,28 @@ header nav .nav-hamburger-icon::after {
   background: currentcolor;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon,
-header nav[aria-expanded='false'] .nav-hamburger-icon::before,
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+header nav[aria-expanded="false"] .nav-hamburger-icon,
+header nav[aria-expanded="false"] .nav-hamburger-icon::before,
+header nav[aria-expanded="false"] .nav-hamburger-icon::after {
   height: 2px;
   border-radius: 2px;
   background: currentcolor;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::before {
+header nav[aria-expanded="false"] .nav-hamburger-icon::before {
   top: -6px;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+header nav[aria-expanded="false"] .nav-hamburger-icon::after {
   top: 6px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon {
+header nav[aria-expanded="true"] .nav-hamburger-icon {
   height: 22px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::before,
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+header nav[aria-expanded="true"] .nav-hamburger-icon::before,
+header nav[aria-expanded="true"] .nav-hamburger-icon::after {
   top: 3px;
   left: 1px;
   transform: rotate(45deg);
@@ -125,13 +126,13 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   border-radius: 2px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+header nav[aria-expanded="true"] .nav-hamburger-icon::after {
   top: unset;
   bottom: 3px;
   transform: rotate(-45deg);
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   header nav .nav-hamburger {
     display: none;
     visibility: hidden;
@@ -148,7 +149,7 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 160px;
   height: auto;
 }
 
@@ -161,13 +162,13 @@ header nav .nav-sections {
   background-color: var(--overlay-color);
 }
 
-header nav[aria-expanded='true'] .nav-sections {
+header nav[aria-expanded="true"] .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
 }
 
-header nav .nav-sections ul {
+header nav .nav-sections ul  {
   list-style: none;
   padding-left: 0;
   font-size: var(--body-font-size-s);
@@ -176,6 +177,7 @@ header nav .nav-sections ul {
 
 header nav .nav-sections ul > li {
   font-weight: 700;
+  color: #fff;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -186,14 +188,14 @@ header nav .nav-sections ul > li > ul > li {
   font-weight: 500;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   header nav .nav-sections {
     display: block;
     visibility: visible;
     white-space: nowrap;
   }
 
-  header nav[aria-expanded='true'] .nav-sections {
+  header nav[aria-expanded="true"] .nav-sections {
     align-self: unset;
   }
 
@@ -201,13 +203,14 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
     padding-right: 16px;
     cursor: pointer;
+    color: #ffffff;
   }
 
   header nav .nav-sections .nav-drop::after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: 0.5em;
+    top: .5em;
     right: 2px;
     transform: rotate(135deg);
     width: 6px;
@@ -217,9 +220,9 @@ header nav .nav-sections ul > li > ul > li {
     border-width: 2px 2px 0 0;
   }
 
-  header nav .nav-sections .nav-drop[aria-expanded='true']::after {
+  header nav .nav-sections .nav-drop[aria-expanded="true"]::after {
     top: unset;
-    bottom: 0.5em;
+    bottom: .5em;
     transform: rotate(315deg);
   }
 
@@ -230,29 +233,29 @@ header nav .nav-sections ul > li > ul > li {
     font-size: var(--body-font-size-xs);
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li {
+  header nav .nav-sections > ul > li {
     flex: 0 1 auto;
     position: relative;
     font-weight: 500;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul {
+  header nav .nav-sections > ul > li > ul {
     display: none;
     position: relative;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+  header nav .nav-sections > ul > li[aria-expanded="true"] > ul {
     display: block;
     position: absolute;
     left: -1em;
     width: 200px;
     margin-top: 12px;
     padding: 1em;
-    background-color: var(--light-color);
+    background-color: var(--highlight-background-color);
     white-space: initial;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
+  header nav .nav-sections > ul > li > ul::before {
     content: '';
     position: absolute;
     top: -8px;
@@ -261,10 +264,10 @@ header nav .nav-sections ul > li > ul > li {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    border-bottom: 8px solid var(--highlight-background-color);
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
+  header nav .nav-sections > ul > li > ul > li {
     padding: 8px 0;
   }
 }
@@ -273,3 +276,30 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+header nav .nav-tools a {
+  color: #FFFFFF;
+  padding: 8px 16px;
+  font-size: 11px;
+  border-radius: 3px;
+  border: 1px solid #ffffff;
+  outline: none;
+  text-decoration: none;
+}
+
+
+@media (max-width: 500px) {
+  header nav {
+    gap: 0 10px;
+  }
+  header nav .nav-tools a {
+    padding: 8px;
+  }
+}
+
+
+
+
+
+
+
+
