@@ -195,6 +195,37 @@
               }
             }
           }
+        },
+        {
+          "title": "Benefits Block",
+          "id": "benefits-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Benefits Block",
+                  "filter": "benefits-block",
+                  "model":"benefits-block"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Benefits Block Card",
+          "id": "benefits-block-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Benefits Block Card",
+                  "model":"benefits-block-card"
+                }
+              }
+            }
+          } 
         }
       ]
     }

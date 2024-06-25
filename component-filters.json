@@ -30,7 +30,8 @@
       "columns",
       "brands-block",
       "security-block",
-      "top-cards"
+      "top-cards",
+      "benefits-block"
     ]
   },
   {
@@ -43,6 +44,12 @@
     "id":"top-cards",
     "components":[
       "top-card"
+    ]
+  },
+  {
+    "id":"benefits-block",
+    "components":[
+      "benefits-block-card"
     ]
   }
 ]
