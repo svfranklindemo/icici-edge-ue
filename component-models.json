@@ -192,7 +192,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "cta",
         "value": "",
         "label": "CTA",
