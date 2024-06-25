@@ -21,7 +21,7 @@
 .benefits-block > div:first-child {
     margin: 2% auto 4%;
 }
-.benefits-block > div:first-child div {
+.benefits-block > div div:first-child div {
     display: -ms-grid;
     display: grid;
     grid-auto-columns: 1fr;
