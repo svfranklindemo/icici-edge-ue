@@ -179,9 +179,23 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "title",
         "value": "",
-        "label": "Text",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "cta",
+        "value": "",
+        "label": "CTA",
         "valueType": "string"
       }
     ]
