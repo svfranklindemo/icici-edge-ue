@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p131729-e1282789.adobeaemcloud.com/bin/franklin.delivery/edgeaem/icici-edge-ue/main"
+    url: "https://author-p121371-e1189853.adobeaemcloud.com/bin/franklin.delivery/svfranklindemo/icici-edge-ue/main"
     type: "markup"
     suffix: ".html"
